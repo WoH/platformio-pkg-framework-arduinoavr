@@ -21,6 +21,7 @@
 #define twi_h
 
   #include <inttypes.h>
+  #include <twi_def.h>
 
   //#define ATMEGA8
 
@@ -41,7 +42,6 @@
   void twi_init(void);
   void twi_disable(void);
   void twi_setAddress(uint8_t);
-  void twi_setFrequency(uint32_t);
   uint8_t twi_readFrom(uint8_t, uint8_t*, uint8_t, uint8_t);
   uint8_t twi_writeTo(uint8_t, uint8_t*, uint8_t, uint8_t, uint8_t);
   uint8_t twi_transmit(const uint8_t*, uint8_t);

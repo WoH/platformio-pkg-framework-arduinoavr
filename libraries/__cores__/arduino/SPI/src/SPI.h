@@ -16,6 +16,12 @@
 
 #include <Arduino.h>
 
+#ifndef SPCR
+ #define SPCR SPCR0
+ #define SPSR SPSR0
+ #define SPDR SPDR0
+#endif
+
 // SPI_HAS_TRANSACTION means SPI has beginTransaction(), endTransaction(),
 // usingInterrupt(), and SPISetting(clock, bitOrder, dataMode)
 #define SPI_HAS_TRANSACTION 1
